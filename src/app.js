@@ -1,13 +1,17 @@
 const express = require('express');
 const app = express();
+const method = require('method-override');
 
 // View Engine
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
 
+// Middlewares de aplicación
+app.use(express.urlencoded({ extended: false })); // Parsea la data que viene de un formulario
+app.use(method('_method')); // Pisa el método POST o GET y usa el método indicado
+
 // Recursos estáticos
 app.use(express.static('public'));
-
 
 // Routes
 const staticRoutes = require('./routes/statics');

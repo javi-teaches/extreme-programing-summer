@@ -1,5 +1,17 @@
 <%- include('../partials/head', { pageTitle: 'Inicio' }) %>
 
-    <h1>Listado de productos</h1>
+   <h1>Listado de productos</h1>
+
+   <ul>
+      <% allProducts.forEach(oneProduct => { %>
+      <li>
+         <b>Nombre: </b> <%= oneProduct.name %>  <br>
+         <b>Precio: </b> <%= oneProduct.price %>  <br>
+         <b>Categoría: </b> <%= oneProduct.category %>  <br>
+         <a href="/products/detail/<%= oneProduct.id %>">VER MÁS</a>
+         <hr>
+      </li>
+      <% }) %>
+   </ul>
 
 <%- include('../partials/footer') %>

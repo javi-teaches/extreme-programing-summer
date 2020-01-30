@@ -1,0 +1,15 @@
+<%- include('../partials/head', { pageTitle: 'Inicio' }) %>
+
+   <h1> Detalle de: <%= product.name %>  </h1>
+
+   <p><b>Precio:</b> <%= product.price %>  </p>
+	<p><b>Categoría:</b> <%= product.category %>  </p>
+	<a href="/products">VOLVER</a>
+	<hr>
+	<form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+		<h5>¿Querés borrar este producto?</h5>
+		<button type="submit">Borrar</button>
+	</form>
+	<hr>
+	
+<%- include('../partials/footer') %>

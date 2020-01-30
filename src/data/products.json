@@ -1,0 +1,14 @@
+[
+ {
+  "id": 1,
+  "name": "Zapatillas",
+  "price": 12345,
+  "category": "tech"
+ },
+ {
+  "id": 2,
+  "name": "Tv",
+  "price": 6754,
+  "category": "house"
+ }
+]

@@ -1,0 +1,29 @@
+<%- include('../partials/head', { pageTitle: 'Inicio' }) %>
+
+	<h1>Formulario de creación de productos</h1>
+
+	<form action="/products/create" method="POST">
+		<div>
+			<label>Name:</label> <br>
+			<input type="text" name="name">
+			<br><br>
+		</div>
+		<div>
+			<label>Price:</label> <br>
+			<input type="text" name="price">
+			<br><br>
+		</div>
+		<div>
+			<label>Category:</label> <br>
+			<select name="category">
+				<option value="home">Home</option>
+				<option value="tech">Tech</option>
+				<option value="sports">Sports</option>
+			</select>
+			<br><br>
+		</div>
+		<button type="submit">SAVE PRODUCT</button>
+		<br><br>
+	</form>
+
+<%- include('../partials/footer') %>
